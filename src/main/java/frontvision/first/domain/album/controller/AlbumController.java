@@ -22,7 +22,7 @@ public class AlbumController {
 
     @GetMapping("/albums")
     public ResponseEntity<SuccessResponse<List<AlbumDto.Response>>> getAlbums() {
-        log.info("getAlbum" + ++count);
+        log.info("GET ALBUM COUNT {}", ++count);
         return SuccessResponse.of(
                 albumService.getAlbums()
         ).setStatus(HttpStatus.OK);
