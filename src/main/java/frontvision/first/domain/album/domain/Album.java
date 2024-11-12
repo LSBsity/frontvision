@@ -16,8 +16,7 @@ public class Album {
     @Column(name = "ALBUM_TITLE")
     private String title;
 
-    @Lob
-    @Column(name = "ALBUM_LYRIC")
+    @Column(name = "ALBUM_LYRIC", columnDefinition = "TEXT")
     private String lyric;
 
     @Column(name = "ALBUM_THUMBNAIL_URL")
